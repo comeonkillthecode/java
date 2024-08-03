@@ -1,0 +1,5 @@
+Encapsulation:
+Definition: Encapsulation refers to the bundling of data (attributes or fields) with the methods (functions or procedures) that operate on that data within a single unit, typically a class in OOP.
+Purpose: It allows you to group related data and behavior together, making your code more organized and modular.
+Information Hiding: One of the key aspects of encapsulation is information hiding. It means that you can control access to an object’s internal state by restricting direct access to its attributes. External code interacts with the object only through well-defined methods.
+Getter and Setter Methods: In most OOP languages, you achieve encapsulation using getter (accessor) and setter (mutator) methods. These methods allow you to read and modify the object’s attributes while maintaining control over how they are accessed and modified.
