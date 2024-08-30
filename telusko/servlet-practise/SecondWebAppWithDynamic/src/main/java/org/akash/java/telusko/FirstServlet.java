@@ -21,14 +21,6 @@ public class FirstServlet extends HttpServlet {
         String city = request.getParameter("ucity");
 
 
-        PrintWriter pr = response.getWriter();
-        pr.println("<html> <head> <title> Second App</title></head>");
-        pr.println("<body> <hl><marquee> Welcome to our dynamic app </marquee></hl>");
-        pr.println( "<table>" ) ;
-        pr.println("<tr> <th>NAME</th> <th>CITY</th> </tr>");
-        pr.println("<tr> <th>"+name+"</th> <th>"+city +"</th> </tr>");
-        pr.println("</table></body>");
-        pr.println("</html>");
-        pr.close();
+        response.sendRedirect("registerSuccess.jsp");
     }
 }
