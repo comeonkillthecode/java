@@ -1,4 +1,4 @@
-package com.akash.learn.spring.fourth_project_simple_web;
+package com.akash.learn.spring.fourth_project_simple_web.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
