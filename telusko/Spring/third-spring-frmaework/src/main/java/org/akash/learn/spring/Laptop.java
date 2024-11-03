@@ -1,7 +1,8 @@
 package org.akash.learn.spring;
 
-public class Laptop {
+public class Laptop implements Computer {
+    @Override
     public void compile(){
-        System.out.println("Compiling.........");
+        System.out.println("Compiling in Laptop");
     }
 }

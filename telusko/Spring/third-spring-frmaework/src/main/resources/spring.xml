@@ -3,15 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="dev" class="org.akash.learn.spring.Dev">
+    <bean id="dev" class="org.akash.learn.spring.Dev" autowire="byType" >
 <!--        setter injection-->
 <!--        <property name="age" value="12"/>-->
 <!--        constructor injection-->
 <!--        <constructor-arg value="14"/>-->
 <!--        <property name="laptop" ref="laptop"/>-->
-        <constructor-arg index="0" value="12"/>
-        <constructor-arg index="1" ref="laptop"/>
+<!--        <constructor-arg index="0" value="12"/>-->
+<!--        <constructor-arg index="1" ref="laptop"/>-->
+<!--        <property name="computer" ref="desktop" />-->
     </bean>
-    <bean id="laptop" class="org.akash.learn.spring.Laptop">
+    <bean id="laptop" class="org.akash.learn.spring.Laptop" primary="true">
+    </bean>
+    <bean id="desktop" class="org.akash.learn.spring.Desktop">
     </bean>
 </beans>

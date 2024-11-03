@@ -12,8 +12,8 @@ public class App {
         System.out.println("In main method");
         System.out.println(Arrays.toString(names));
 
-        Dev obj = (Dev) context.getBean("dev");
-        System.out.println(obj.getAge());
+        Dev obj = context.getBean(Dev.class);
+//        System.out.println(obj.getAge());
         obj.learn();
     }
 }
