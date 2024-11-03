@@ -9,9 +9,11 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         String[] names = context.getBeanDefinitionNames();
-//        Dev obj = context.getBean(Dev.class);
-//        obj.learn();
         System.out.println("In main method");
         System.out.println(Arrays.toString(names));
+
+        Dev obj = (Dev) context.getBean("dev");
+        System.out.println(obj.getAge());
+        obj.learn();
     }
 }
