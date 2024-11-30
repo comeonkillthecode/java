@@ -30,4 +30,19 @@ public class ProductService {
         product.setImageData(imageFile.getBytes());
         return productRepository.save(product);
     }
+
+    public Product updateProduct(int productId, Product product, MultipartFile imageFile) throws IOException {
+        product.setImageName(imageFile.getOriginalFilename());
+        product.setImageType(imageFile.getContentType());
+        product.setImageData(imageFile.getBytes());
+        return productRepository.save(product);
+    }
+
+    public void deleteProduct(int productId) {
+        productRepository.deleteById(productId);
+    }
+
+    public List<Product> searchProducts(String keyword) {
+        return productRepository.searchProducts(keyword);
+    }
 }
